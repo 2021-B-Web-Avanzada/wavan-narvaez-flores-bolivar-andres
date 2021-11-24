@@ -137,3 +137,19 @@ const respuestaEvery = arreglo
         }
     );
 console.log('respuestaEvery', respuestaEvery);
+
+//[1,2,3,4,5,6,5,4,3,1]
+//REDUCE          izq -> der
+//REDUCE RIGHT    der -> izq
+//100 <3 Puntos de vista
+//100 -1 -2 -3 -4 -5 -6 -5 -4 -3 -1 =
+//0 1 + 2 + 3 + 4 + 6 + 5 + 4 + 3 +1 =
+
+const respuestaReduce = arreglo
+    .reduce(
+        function (valorAcumulado, valorActual, indice, arreglo){
+            return(valorAcumulado + valorActual.nota);
+        },
+        100 //Acumulado
+    );
+console.log('respuestaReduce', respuestaReduce); //100 - x = -46
