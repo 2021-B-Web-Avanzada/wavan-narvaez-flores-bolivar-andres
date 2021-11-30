@@ -23,3 +23,25 @@ fs.readFile(
     }
 );
 console.log('TERCERO')
+
+fs.readFile(
+    './06-ejemplo.txt',
+    'utf-8',
+    (error, contenido) => {
+        if(error){
+            console.log({mensaje: 'error leyendo contenido', error: error});
+        }else{
+            fs.readFile(
+                './01-variable.js',
+                'utf-8',
+                (errorVariable, contenidoVariable) => {
+                    if(errorVariable){
+                        console.error({mensaje: 'error leyendo contenido variable', error: errorVariable});
+                    }else{
+                        console.log(contenido, contenidoVariable);
+                    }
+                }
+            );
+        }
+    }
+);
