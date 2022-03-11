@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "empleados-543f8": {
+      "hosting": {
+        "03-CRUD": [
+          "empleados-543f8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "empleados-543f8"
+  }
+}
